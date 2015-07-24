@@ -38,15 +38,15 @@ public final class EmbeddedRedisServerBean implements InitializingBean, Disposab
 	}
 
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("Starting on " + getPort());
-		redisServer.start();
+//		System.out.println("Starting on " + getPort());
+//		redisServer.start();
 	}
 
 	public void destroy() throws Exception {
-		if(redisServer != null) {
-			System.out.println("Shutting down on " + getPort());
-			redisServer.stop();
-		}
+//		if(redisServer != null) {
+//			System.out.println("Shutting down on " + getPort());
+//			redisServer.stop();
+//		}
 	}
 
 	public RedisServer getRedisServer() {

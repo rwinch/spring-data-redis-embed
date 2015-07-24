@@ -63,15 +63,9 @@ public class EmbeddedRedisServerBeanIntegrationTests {
 		}
 
 		@Bean
-		public JedisConnectionFactory connectionFactory(@Value("#{@embeddedRedis.port}") int port) {
+		public JedisConnectionFactory connectionFactory() {
 			JedisConnectionFactory connection = new JedisConnectionFactory();
-			connection.setPort(port);
 			return connection;
-		}
-
-		@Bean
-		public EmbeddedRedisServerBean embeddedRedis() throws IOException {
-			return new EmbeddedRedisServerBean(new RedisServer());
 		}
 	}
 
